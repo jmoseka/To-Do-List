@@ -2,9 +2,10 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "A simple HTML list of To Do tasks.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
