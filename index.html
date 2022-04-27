@@ -1,1 +1,57 @@
-<head><script defer src="bundle.js"></script></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/1cd527edf2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-Do-List</title>
+<script defer src="bundle.js"></script></head>
+<body>
+    <div class="container">
+        <!--outer box has bottom border
+            inner box has margin away from the container
+        -->
+
+        <div class="outer-box">
+            <div class="inner-box">
+                <p class="logo-title">Today's To Do</p>
+            <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+        </div>
+
+        <div class="outer-box">
+            <div class="inner-box">
+                <form action="" id="task-submit">
+                    <input class="task-input" type="text" placeholder="add to your list">
+                </form>
+                
+                <div class="enter-img">
+                    <img src="images/left-arrow.png" alt="enter icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="list-placeholder">
+            <!--dedicated placeholder for dynamic task list items-->
+            
+
+            
+
+        </div>
+        <div class="clear">
+            <a href="#" id="clear-btn">Clear all completed</a>
+        </div>
+
+    </div>
+</body>
+</html>
