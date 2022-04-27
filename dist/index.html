@@ -18,36 +18,19 @@
 <script defer src="bundle.js"></script></head>
 <body>
     <div class="container">
-        <!--outer box has bottom border
-            inner box has margin away from the container
-        -->
-
-        <div class="outer-box">
-            <div class="inner-box">
-                <p class="logo-title">Today's To Do</p>
-            <i class="fa-solid fa-arrows-rotate"></i>
+        <header>
+            <h3 class="title-list">Today's To Do</h3>
+            <div class="task-list header-list">
+                <div class="task-list-item">
+                        <input type="text" id="input-task" placeholder="Add to your list...">  
+                      <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
             </div>
-        </div>
+        </header>
 
-        <div class="outer-box">
-            <div class="inner-box">
-                <form action="" id="task-submit">
-                    <input class="task-input" type="text" placeholder="add to your list">
-                </form>
-                
-                <div class="enter-img">
-                    <img src="images/left-arrow.png" alt="enter icon">
-                </div>
-            </div>
-        </div>
-
-        <div class="list-placeholder">
-            <!--dedicated placeholder for dynamic task list items-->
-            
-
-            
-
-        </div>
+          <ul class="task-list-placeholder">
+          </ul>
+       
         <div class="clear">
             <a href="#" id="clear-btn">Clear all completed</a>
         </div>
