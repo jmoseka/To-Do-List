@@ -1,68 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
 body {
   background-color: #f8f4f4;
 }
 
 .container {
-  background: white;
   width: 500px;
-  padding-bottom: 20px;
-}
-
-.outer-box {
-  width: 100%;
-  border-bottom: 1px solid gray;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: #eeecec;
 }
 
-.inner-box {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
+header {
+  background-color: white;
 }
 
-#task-submit {
-  width: 100%;
-  height: inherit;
-}
-
-.task-input {
-  padding: 0;
-  margin: 0;
-  width: inherit;
-  height: 50px;
-  border: none;
-  font-style: italic;
-  outline: 0;
+.title-list {
+  margin-left: 15px;
 }
 
 .task-group {
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  border: 1px solid #f8f4f4;
 }
 
-.task-text {
-  margin-left: 10px;
+.header-list {
+  border-top: 2px solid #f8f4f4;
+}
+
+#input-task {
+  font-size: 17px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.task-list-placeholder {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.task-list-placeholder li {
+  list-style: none;
+}
+
+.task-list {
+  border-bottom: 2px solid #f8f4f4;
+}
+
+.task-list-item {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.label:active {
+  text-decoration: line-through;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 .clear {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  padding: 5px;
+  padding: 20px;
+  align-self: center;
 }
 
-.clear a {
-  color: black;
+#clear-btn {
   text-decoration: none;
+  color: black;
 }
 
-.clear a:hover {
+#clear-btn:hover {
+  color: blue;
   text-decoration: underline;
 }
