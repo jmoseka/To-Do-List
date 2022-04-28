@@ -98,12 +98,10 @@ export const displayList = () => {
     let sum = 0;
     // eslint-disable-next-line no-restricted-syntax
     for (const indexData of [...objectListIndex]) {
-      indexData.index = sum;
       sum += 1;
+      indexData.index = sum;
     }
     window.localStorage.setItem('taskData', JSON.stringify(objectListIndex));
-    taskListPlaceholder.innerHTML = '';
-    displayList();
   }
 
   const list = JSON.parse(window.localStorage.getItem('taskData'));
@@ -112,9 +110,8 @@ export const displayList = () => {
       const id = parseInt(btn.id, 10) - 1;
       list.splice(id, 1);
       resetIndex(list);
-      window.localStorage.setItem('taskData', JSON.stringify(list));
       taskListPlaceholder.innerHTML = '';
-      displayList();
+    displayList();
     });
   });
 
@@ -137,7 +134,7 @@ export const displayList = () => {
         lbl.contentEditable = 'false';
         const str = lbl.textContent;
         let id = lbl.id - 1;
-        if (id < 0) { id = 1; }
+        if (id < 0) { id = 0; }
         toDoListData[id].description = str;
         window.localStorage.setItem('taskData', JSON.stringify(toDoListData));
         taskListPlaceholder.innerHTML = '';
@@ -161,11 +158,11 @@ export const displayList = () => {
       if (e.target.checked) {
       // get the index class of the clicked checkbox and convert to integer
         let number = parseInt(e.target.classList[1], 10) - 1;
-        if (number < 0) { number = 1; }
+        if (number < 0) { number = 0; }
         updateCompletedData(number, true);
       } else {
         let number = parseInt(e.target.classList[1], 10) - 1;
-        if (number < 0) { number = 1; }
+        if (number < 0) { number = 0; }
         updateCompletedData(number, false);
       }
     });
