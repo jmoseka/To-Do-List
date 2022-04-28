@@ -110,7 +110,7 @@ export const displayList = () => {
   removeBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
       const id = parseInt(btn.id, 10) - 1;
-       list.splice(id, 1);
+      list.splice(id, 1);
       resetIndex(list);
       window.localStorage.setItem('taskData', JSON.stringify(list));
       taskListPlaceholder.innerHTML = '';
@@ -122,7 +122,7 @@ export const displayList = () => {
     box.addEventListener('click', () => {
       clearSelection(taskInnerBox);
       box.classList.add('selected');
-      const id = parseInt(box.id, 10);
+      const id = parseInt(box.id, 10) - 1;
       removeBtn[id].classList.remove('hidden');
       editBtn[id].classList.add('hidden');
     });
