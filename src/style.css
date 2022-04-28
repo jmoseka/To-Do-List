@@ -17,10 +17,11 @@ header {
   background-color: white;
 }
 
-.title-list {
-  margin-left: 15px;
-}
 
+.hidden{
+  display: none;
+ 
+}
 .task-group {
   width: 100%;
   display: flex;
@@ -33,6 +34,15 @@ header {
   border-top: 2px solid #f8f4f4;
 }
 
+.arrow-left{
+  font-size: 10px;
+}
+
+.optionBtn{
+  width: 10%;
+  text-align: end;
+  cursor: move;
+}
 #input-task {
   font-size: 17px;
   border: 0;
@@ -59,12 +69,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  cursor: pointer;
+  align-items: center;
 }
 
-.label:active {
-  text-decoration: line-through;
-}
+
 
 .line-through {
   text-decoration: line-through;
