@@ -16,24 +16,16 @@ export const addTask = (taskObject) => {
 };
 
 export function updateCompletedDisplay() {
-  const taskDiv = document.querySelectorAll('.task-div');
   const checkbox = document.querySelectorAll('.checkbox');
+  const label = document.querySelectorAll('.label');
   const listItemObject = JSON.parse(window.localStorage.getItem('taskData') || '[]');
-  let i = 0;
-  let j = 0;
-  while (i < listItemObject.length) {
-    if (listItemObject[i].completed === true) {
-      j = listItemObject[i].index - 1;
-      if (j < 0) { j = 1; }
-      taskDiv[j].classList.add('line-through');
-      checkbox[j].setAttribute('checked', 'checked');
-    } else {
-      j = listItemObject[i].index - 1;
-      if (j < 0) { j = 1; }
-      taskDiv[j].classList.remove('line-through');
-      checkbox[j].setAttribute('unchecked', 'unchecked');
+  // eslint-disable-next-line no-restricted-syntax
+  for (const element of [...listItemObject]) {
+    if (element.completed === true) {
+      const id = parseInt(element.index, 10) - 1;
+      label[id].classList.add('line-through');
+      checkbox[id].setAttribute('checked', 'checked');
     }
-    i += 1;
   }
 }
 
@@ -47,7 +39,7 @@ export const displayList = () => {
     element.innerHTML = `
                   <div class="task-inner-box"  id="${listItemObject[list].index}">
                     <div class="task-list-item">
-                      <div class="task-div ${listItemObject[list].index}">
+                      <div class="task-div line-through ${listItemObject[list].index}">
                           <input class="checkbox ${listItemObject[list].index}" type="checkbox"/>    
                           <div id="${listItemObject[list].index}" class="label">${listItemObject[list].description}</div>
                           
@@ -55,7 +47,7 @@ export const displayList = () => {
                         <div class="optionBtn editBtn ${listItemObject[list].index}" id="${listItemObject[list].index}">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <div class="optionBtn removeBtn ${listItemObject[list].index} hidden" id="${listItemObject[list].index}">
+                        <div class="optionBtn deleteBtn removeBtn ${listItemObject[list].index} hidden" id="${listItemObject[list].index}">
                         <i class="fa-solid fa-trash-can"></i>
                         </div>
                     </div>
@@ -95,10 +87,34 @@ export const displayList = () => {
 
   editBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
-      let indexEdit = btn.id.toString() - 1;
-      if (indexEdit < 0) { indexEdit = 1; }
+      const indexEdit = parseInt(btn.id, 10) - 1;
+      // if (indexEdit < 0) { indexEdit = 1; }
       btn.classList.add('hidden');
       removeBtn[indexEdit].classList.remove('hidden');
+    });
+  });
+
+  function resetIndex(objectListIndex) {
+    let sum = 0;
+    // eslint-disable-next-line no-restricted-syntax
+    for (const indexData of [...objectListIndex]) {
+      indexData.index = sum;
+      sum += 1;
+    }
+    window.localStorage.setItem('taskData', JSON.stringify(objectListIndex));
+    taskListPlaceholder.innerHTML = '';
+    displayList();
+  }
+
+  const list = JSON.parse(window.localStorage.getItem('taskData'));
+  removeBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = parseInt(btn.id, 10) - 1;
+       list.splice(id, 1);
+      resetIndex(list);
+      window.localStorage.setItem('taskData', JSON.stringify(list));
+      taskListPlaceholder.innerHTML = '';
+      displayList();
     });
   });
 
@@ -106,8 +122,7 @@ export const displayList = () => {
     box.addEventListener('click', () => {
       clearSelection(taskInnerBox);
       box.classList.add('selected');
-      let id = box.id.toString() - 1;
-      if (id < 0) { id = 1; }
+      const id = parseInt(box.id, 10);
       removeBtn[id].classList.remove('hidden');
       editBtn[id].classList.add('hidden');
     });
@@ -122,7 +137,6 @@ export const displayList = () => {
         lbl.contentEditable = 'false';
         const str = lbl.textContent;
         let id = lbl.id - 1;
-        console.log(id);
         if (id < 0) { id = 1; }
         toDoListData[id].description = str;
         window.localStorage.setItem('taskData', JSON.stringify(toDoListData));
