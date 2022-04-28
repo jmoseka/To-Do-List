@@ -17,11 +17,10 @@ header {
   background-color: white;
 }
 
-
-.hidden{
+.hidden {
   display: none;
- 
 }
+
 .task-group {
   width: 100%;
   display: flex;
@@ -34,15 +33,16 @@ header {
   border-top: 2px solid #f8f4f4;
 }
 
-.arrow-left{
+.arrow-left {
   font-size: 10px;
 }
 
-.optionBtn{
+.optionBtn {
   width: 10%;
   text-align: end;
   cursor: move;
 }
+
 #input-task {
   font-size: 17px;
   border: 0;
@@ -68,12 +68,13 @@ header {
 .selected {
   background: rgb(255, 255, 174);
 }
+
 .task-div {
   width: 100%;
   display: flex;
   align-items: center;
-  
 }
+
 .label {
   width: 90%;
   float: right;
@@ -88,8 +89,6 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 .line-through {
   text-decoration: line-through;
