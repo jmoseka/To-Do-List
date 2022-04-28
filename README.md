@@ -17,9 +17,9 @@
 Webpack
 
 
-## Screenshot
+## DEMO
 
-<img src="screenshot.PNG" alt="screenshot image">
+<img src="assets/demo.gif" alt="gif project">
 
 ## Getting Started
 
