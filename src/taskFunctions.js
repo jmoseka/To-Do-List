@@ -111,7 +111,7 @@ export const displayList = () => {
       list.splice(id, 1);
       resetIndex(list);
       taskListPlaceholder.innerHTML = '';
-    displayList();
+      displayList();
     });
   });
 
