@@ -48,6 +48,7 @@ header {
   border: 0;
   outline: 0;
   width: 100%;
+  padding: 10px;
 }
 
 .task-list-placeholder {
@@ -64,8 +65,24 @@ header {
   border-bottom: 2px solid #f8f4f4;
 }
 
+.selected {
+  background: rgb(255, 255, 174);
+}
+.task-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.label {
+  width: 90%;
+  float: right;
+  padding: 10px;
+  outline: 0;
+}
+
 .task-list-item {
-  padding: 15px;
+  padding: 2px 15px 0 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

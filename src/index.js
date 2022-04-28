@@ -3,7 +3,6 @@ import TaskClass, { displayList, addTask, updateCompletedDisplay } from './taskF
 
 const inputTask = document.querySelector('#input-task');
 const taskListPlaceholder = document.querySelector('.task-list-placeholder');
-const taskDiv = document.querySelectorAll('.task-div');
 const checkbox = document.querySelectorAll('.checkbox');
 
 displayList();
