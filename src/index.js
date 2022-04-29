@@ -1,5 +1,7 @@
 import './style.css';
-import TaskClass, { displayList, addTask, updateCompletedDisplay, resetIndex } from './taskFunctions.js';
+import TaskClass, {
+  displayList, addTask, updateCompletedDisplay, resetIndex,
+} from './modules/taskFunctions.js';
 
 const inputTask = document.querySelector('#input-task');
 const taskListPlaceholder = document.querySelector('.task-list-placeholder');
