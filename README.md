@@ -19,7 +19,7 @@ Webpack
 
 ## DEMO
 
-<img src="assets/demo.gif" alt="gif project">
+<img src="assets/demo-live.gif" alt="gif project">
 
 ## Getting Started
 
