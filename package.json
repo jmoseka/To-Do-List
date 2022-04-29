@@ -38,4 +38,5 @@
   "dependencies": {
     "lodash": "^4.17.21"
   }
+   "main": "webpack.config.js"
 }
