@@ -143,6 +143,7 @@ export const displayList = () => {
         window.localStorage.setItem('taskData', JSON.stringify(toDoListData));
         taskListPlaceholder.innerHTML = '';
         displayList();
+        updateCompletedDisplay();
       }
     });
   });
