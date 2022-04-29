@@ -1,8 +1,9 @@
 import './style.css';
-import TaskClass, { displayList, addTask, updateCompletedDisplay } from './taskFunctions.js';
+import TaskClass, { displayList, addTask, updateCompletedDisplay, resetIndex } from './taskFunctions.js';
 
 const inputTask = document.querySelector('#input-task');
 const taskListPlaceholder = document.querySelector('.task-list-placeholder');
+const clearBtn = document.querySelector('#clear-btn');
 
 displayList();
 updateCompletedDisplay();
@@ -21,4 +22,13 @@ inputTask.addEventListener('keypress', (event) => {
     displayList();
     inputTask.value = '';
   }
+});
+
+clearBtn.addEventListener('click', () => {
+  const toDoListData = JSON.parse(window.localStorage.getItem('taskData') || '[]');
+  const clearItems = toDoListData.filter((completeList) => completeList.completed === false);
+  window.localStorage.setItem('bookData', JSON.stringify(clearItems));
+  resetIndex(clearItems);
+  taskListPlaceholder.innerHTML = '';
+  displayList();
 });

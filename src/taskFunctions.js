@@ -15,6 +15,16 @@ export const addTask = (taskObject) => {
   window.localStorage.setItem('taskData', JSON.stringify(listOfTask));
 };
 
+export function resetIndex(objectListIndex) {
+  let sum = 0;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const indexData of [...objectListIndex]) {
+    sum += 1;
+    indexData.index = sum;
+  }
+  window.localStorage.setItem('taskData', JSON.stringify(objectListIndex));
+}
+
 export function updateCompletedDisplay() {
   const checkbox = document.querySelectorAll('.checkbox');
   const label = document.querySelectorAll('.label');
@@ -25,6 +35,10 @@ export function updateCompletedDisplay() {
       const id = parseInt(element.index, 10) - 1;
       label[id].classList.add('line-through');
       checkbox[id].setAttribute('checked', 'checked');
+    } else {
+      const id = parseInt(element.index, 10) - 1;
+      label[id].classList.remove('line-through');
+      checkbox[id].setAttribute('unchecked', 'unchecked');
     }
   }
 }
@@ -93,16 +107,6 @@ export const displayList = () => {
       removeBtn[indexEdit].classList.remove('hidden');
     });
   });
-
-  function resetIndex(objectListIndex) {
-    let sum = 0;
-    // eslint-disable-next-line no-restricted-syntax
-    for (const indexData of [...objectListIndex]) {
-      sum += 1;
-      indexData.index = sum;
-    }
-    window.localStorage.setItem('taskData', JSON.stringify(objectListIndex));
-  }
 
   const list = JSON.parse(window.localStorage.getItem('taskData'));
   removeBtn.forEach((btn) => {
