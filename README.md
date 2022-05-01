@@ -16,7 +16,6 @@
  HTML
 
 **Technologies:** 
-
 Webpack
 
 
