@@ -14,7 +14,9 @@
  CSS
  
  HTML
-- **Technologies:** 
+
+**Technologies:** 
+
 Webpack
 
 
