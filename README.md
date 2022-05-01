@@ -7,7 +7,7 @@
 
 ## Built With
 
-- **Languages:**
+**Languages:**
 
  JS
  
