@@ -19,7 +19,7 @@
 
 Webpack
 
-## (Live Link)["https://626e5ac8a92f1b301e871a90--fanciful-stroopwafel-1c6022.netlify.app/#"]
+## [Live Link](https://626e5ac8a92f1b301e871a90--fanciful-stroopwafel-1c6022.netlify.app/#)
 ## DEMO
 
 <img src="assets/demo-live.gif" alt="gif project">
