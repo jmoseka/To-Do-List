@@ -7,17 +7,9 @@
 
 ## Built With
 
-**Languages:**
+**Languages:** JS  CSS HTML
 
- JS
- 
- CSS
- 
- HTML
-
-**Technologies:** 
-
-Webpack
+**Technologies:**  Webpack
 
 ## [Live Link](https://626e5ac8a92f1b301e871a90--fanciful-stroopwafel-1c6022.netlify.app/#)
 ## DEMO
