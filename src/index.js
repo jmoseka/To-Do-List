@@ -1,5 +1,7 @@
-import displayList, { updateCompletedDisplay, resetIndex } from './modules/taskFunctions.js';
-import TaskClass from './modules/operation.js'
+import displayList, { updateCompletedDisplay } from './modules/displayFunctions.js';
+import TaskClass from './modules/classOperation.js';
+import { resetIndex } from './modules/eventListeners.js';
+import './style.css';
 
 const inputTask = document.querySelector('#input-task');
 const clearBtn = document.querySelector('#clear-btn');

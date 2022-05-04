@@ -1,4 +1,4 @@
-import displayList from './taskFunctions.js';
+import displayList from './displayFunctions.js';
 
 export default class TaskClass {
   constructor(description, completed, index) {

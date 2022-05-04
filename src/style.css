@@ -20,7 +20,6 @@ header {
 .hidden {
   display: none;
 }
-
 .task-group {
   width: 100%;
   display: flex;
@@ -37,7 +36,7 @@ header {
   font-size: 10px;
 }
 
-.optionBtn {
+.group-Btn {
   width: 10%;
   text-align: end;
   cursor: move;
@@ -81,7 +80,9 @@ header {
   padding: 10px;
   outline: 0;
 }
-
+.removeBtn {
+  cursor: pointer;
+}
 .task-list-item {
   padding: 2px 15px 0 15px;
   display: flex;
