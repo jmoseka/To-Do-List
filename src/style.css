@@ -20,6 +20,7 @@ header {
 .hidden {
   display: none;
 }
+
 .task-group {
   width: 100%;
   display: flex;
@@ -80,9 +81,11 @@ header {
   padding: 10px;
   outline: 0;
 }
+
 .removeBtn {
   cursor: pointer;
 }
+
 .task-list-item {
   padding: 2px 15px 0 15px;
   display: flex;
