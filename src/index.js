@@ -1,6 +1,6 @@
-import displayList, { updateCompletedDisplay } from './modules/displayFunctions.js';
+import displayList from './modules/displayFunctions.js';
 import TaskClass from './modules/classOperation.js';
-import { resetIndex } from './modules/eventListeners.js';
+import { updateCompletedDisplay, resetIndex } from './modules/helperFunctions.js';
 import './style.css';
 
 const inputTask = document.querySelector('#input-task');
