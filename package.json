@@ -4,7 +4,7 @@
   "description": "A simple HTML list of To Do tasks.",
   "private": true,
   "scripts": {
-    "test": "jest --env=jsdom --coverage",
+    "test": "jest --env=jsdom",
     "dev": "webpack-dev-server --open",
     "build": "webpack"
   },

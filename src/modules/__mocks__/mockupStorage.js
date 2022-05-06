@@ -1,3 +1,4 @@
+// eslint-disable-next-line func-names
 const localStorageMock = (function () {
   const store = {};
 

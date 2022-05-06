@@ -9,7 +9,7 @@ const inputTask = document.querySelector('#input-task');
 const clearBtn = document.querySelector('#clear-btn');
 // populate list when the page opens
 displayList();
-// updateCompletedDisplay();
+updateCompletedDisplay();
 
 // Execute a function when the user presses a key on the keyboard
 inputTask.addEventListener('keypress', (event) => {
