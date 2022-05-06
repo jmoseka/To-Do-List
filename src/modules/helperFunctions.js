@@ -17,14 +17,6 @@ export function updateCompletedDisplay() {
   }
 }
 
-/* eslint-disable no-restricted-syntax */
-export function updateCompletedData(numberIndex, completedMark) {
-  const list = JSON.parse(window.localStorage.getItem('taskData'));
-  list[numberIndex].completed = completedMark;
-  window.localStorage.setItem('taskData', JSON.stringify(list));
-  updateCompletedDisplay();
-}
-
 export function clearTaskItem() {
   const taskListItem = document.querySelectorAll('.task-inner-box');
   const optionBtn = document.querySelectorAll('.optionBtn');

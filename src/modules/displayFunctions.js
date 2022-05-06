@@ -1,7 +1,10 @@
 /* eslint-disable no-restricted-syntax */
+import { removeTask } from './classOperation.js';
+import editTask from './editTask.js';
 import {
-  clearTaskItem, updateCompletedData, updateCompletedDisplay, resetIndex,
+  clearTaskItem, updateCompletedDisplay, resetIndex,
 } from './helperFunctions.js';
+import updateCompletedData from './updateCompletedData.js';
 
 const displayList = () => {
   const listItemObject = JSON.parse(window.localStorage.getItem('taskData') || '[]');
@@ -61,7 +64,7 @@ const addEventListeners = () => {
   for (const btn of [...Object(removeBtn)]) {
     btn.addEventListener('click', () => {
       const id = parseInt(btn.getAttribute('data-index'), 10);
-      list.splice(id, 1);
+      removeTask(list, id);
       resetIndex(list);
       displayList();
     });
@@ -71,10 +74,12 @@ const addEventListeners = () => {
     indexCheckbox.addEventListener('change', (e) => {
       if (e.target.checked) {
         const index = parseInt(indexCheckbox.getAttribute('data-index'), 10);
-        updateCompletedData(index, true);
+        window.localStorage.setItem('taskData', JSON.stringify(updateCompletedData(list, index, true)));
+        updateCompletedDisplay();
       } else {
         const index = parseInt(indexCheckbox.getAttribute('data-index'), 10);
-        updateCompletedData(index, false);
+        window.localStorage.setItem('taskData', JSON.stringify(updateCompletedData(list, index, false)));
+        updateCompletedDisplay();
       }
     });
   }
@@ -89,8 +94,7 @@ const addEventListeners = () => {
         lbl.contentEditable = 'false';
         const str = lbl.textContent;
         const id = parseInt(lbl.getAttribute('data-index'), 10);
-        list[id].description = str;
-        window.localStorage.setItem('taskData', JSON.stringify(list));
+        window.localStorage.setItem('taskData', JSON.stringify(editTask(list, id, str)));
         displayList();
         updateCompletedDisplay();
       }
