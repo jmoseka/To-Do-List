@@ -6,6 +6,8 @@ import {
 } from './helperFunctions.js';
 import updateCompletedData from './updateCompletedData.js';
 
+// Store listitems to be sorted
+
 const displayList = () => {
   const listItemObject = JSON.parse(window.localStorage.getItem('taskData') || '[]');
   const listPlaceholder = document.querySelector('.task-list-placeholder');
@@ -36,7 +38,6 @@ const displayList = () => {
                   `;
     listPlaceholder.appendChild(element);
   }
-
   // eslint-disable-next-line no-use-before-define
   addEventListeners();
 };
