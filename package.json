@@ -4,7 +4,7 @@
   "description": "A simple HTML list of To Do tasks.",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --env=jsdom",
     "dev": "webpack-dev-server --open",
     "build": "webpack"
   },
@@ -18,14 +18,28 @@
   "bugs": {
     "url": "https://github.com/jmoseka/To-Do-List/issues"
   },
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
   "homepage": "https://github.com/jmoseka/To-Do-List#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@testing-library/jest-dom": "^5.16.4",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
+    "global-jsdom": "^8.4.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest-environment-jsdom": "^28.0.2",
+    "jest-localstorage-mock": "^2.4.21",
+    "jsdom": "^19.0.0",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -36,6 +50,8 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "jest": "^28.0.3",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21"
   }
 }
