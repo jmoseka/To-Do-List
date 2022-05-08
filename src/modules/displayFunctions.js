@@ -18,6 +18,7 @@ const displayList = () => {
   for (const listIndex of [...Object.keys(listItemObject)]) {
     const element = document.createElement('li');
     element.setAttribute('data-index', listIndex);
+    element.draggable = true;
     element.classList.add('task-list');
     element.innerHTML = `
                     <div data-index=${listIndex} class="task-inner-box"  id="${listItemObject[listIndex].index}">
