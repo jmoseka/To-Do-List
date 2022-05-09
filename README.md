@@ -29,19 +29,20 @@ Webpack
 
 ### Setup
 1. Git [clone]("https://github.com/jmoseka/To-Do-List") this repository to your local machine
->   ```git clone https://github.com/jmoseka/To-Do-List``` 
+- ```git clone https://github.com/jmoseka/To-Do-List``` 
 
->   ``` cd To-Do-List```
+-  ``` cd To-Do-List```
 
 2. Download as [zip](https://github.com/jmoseka/To-Do-List.git) and extract the files to your local machine
 
 <hr>
 
 ### Installations
-Run ```npm install``` to install all modules that are listed on package.json file and their dependencies.
+```npm install # to install all modules that are listed on package.json file and their dependencies.```
 
 (if needed)
-Run ```npm update``` to update all packages in the node_modules directory and their dependencies.
+
+```npm update # to update all packages in the node_modules directory and their dependencies ```
 
 <hr>
 
