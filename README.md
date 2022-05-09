@@ -3,40 +3,58 @@
 
 # To-Do-List
 
-> A simple to-do list 
+A web app that helps you organize your day. It simply lists the things that you need to do and allows you to mark them as complete. It is built with ES6 and Webpack!
 
 ## Built With
 
-**Languages:** JS  CSS HTML
+JS
 
-**Technologies:**  Webpack
+CSS
 
-## [Live Link](https://626e5ac8a92f1b301e871a90--fanciful-stroopwafel-1c6022.netlify.app/#)
-## DEMO
+HTML
+
+Webpack
+
+### 🔴 [Live Link](https://626e5ac8a92f1b301e871a90--fanciful-stroopwafel-1c6022.netlify.app/#)
+
+### DEMO
 
 <img src="assets/demo-live.gif" alt="gif project">
 
-## Getting Started
+# Getting Started
 
 ### Prerequisites
-Download node [here](https://nodejs.org/en/download/) if not already installed in your local machine
+
+[Node](https://nodejs.org/en/download/)
 
 ### Setup
 1. Git [clone]("https://github.com/jmoseka/To-Do-List") this repository to your local machine
+>   ```git clone https://github.com/jmoseka/To-Do-List``` 
 
-> Issue the command ```git clone https://github.com/jmoseka/Webpsck-Setup``` on your terminal to download this repo
+>   ``` cd To-Do-List```
 
 2. Download as [zip](https://github.com/jmoseka/To-Do-List.git) and extract the files to your local machine
 
-### Install
-Copy [linter error](https://github.com/microverseinc/linters-config/tree/master/html-css-js) files for html, css and js to your root repo
+<hr>
 
-Run the command ```npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x``` to install the required dependacies 
+### Installations
+Run ```npm install``` to install all modules that are listed on package.json file and their dependencies.
+
+(if needed)
+Run ```npm update``` to update all packages in the node_modules directory and their dependencies.
+
+<hr>
 
 ### Usage
 Use [liverserver](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer#:~:text=Shortcuts%20to%20Start%2FStop%20Server&text=Open%20a%20HTML%20file%20and,on%20Open%20with%20Live%20Server%20.&text=Open%20the%20Command%20Pallete%20by,Server%20to%20stop%20a%20server) to open and run the project in the browser
 
+<hr>
+
 ### Run tests
+
+Run tests with jest
+
+`npm test`
 
 Run tests on the .css files
 ```npx stylelint "**/*.{css,scss}"```
@@ -46,16 +64,23 @@ Run tests on the .js files
 
 Run ALL tests on the pull request 
 
+<hr>
+
 ### Deployment
 Files can be deployed with github pages
 
-## Authors 👤
+## Author 👤
 
 Jamila Moseka
 
 - GitHub: [jmoseka](https://github.com/jmoseka)
 - LinkedIn [jamila-moseka](https://www.linkedin.com/in/jamila-moseka/)
 - Twitter [@milamoseka](https://twitter.com/milamoseka)
+
+Michael Ugochukwu
+
+- GitHub: [Mikelobi](https://github.com/Mikelobi)
+
 <hr>
 
 ## Contributing 🤝 
